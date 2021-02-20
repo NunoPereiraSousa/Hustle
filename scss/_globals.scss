@@ -44,3 +44,11 @@ a:focus {
 .grid {
   display: grid;
 }
+
+.line {
+  transform: translateY(100%);
+}
+
+.hide {
+  overflow: hidden;
+}

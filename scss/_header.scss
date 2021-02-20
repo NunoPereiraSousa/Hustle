@@ -1,11 +1,13 @@
 .navbar {
+  position: fixed;
+  background-color: transparent;
   width: 100%;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 1.5rem;
 
   &__logo,
   &__item {
     font-size: 1.25rem;
-    font-weight: 500;
+    font-weight: 400;
     color: $white;
 
     a {
