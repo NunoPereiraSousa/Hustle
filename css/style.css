@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Montserrat";
+  font-size: 1rem;
+  width: 100%;
+  background-color: #171717;
+}
+
+a,
+a:visited,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-fd-c {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flex-jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-jc-sa {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.flex-ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+.navbar {
+  width: 100%;
+  padding: 1rem 1.5rem;
+}
+
+.navbar__logo {
+  color: #dfd3c3;
+  font-size: 1.25rem;
+}
+
+.navbar__hamb {
+  width: 30px;
+  height: 20px;
+  position: relative;
+}
+
+.navbar__hamb__lines {
+  width: 100%;
+  height: 2px;
+  background-color: #dfd3c3;
+}
+
+.navbar__hamb__lines:nth-child(1) {
+  position: absolute;
+  top: 0%;
+}
+
+.navbar__hamb__lines:nth-child(2) {
+  position: absolute;
+  top: 50%;
+}
+
+.navbar__hamb__lines:nth-child(3) {
+  position: absolute;
+  top: 100%;
+}
+/*# sourceMappingURL=style.css.map */

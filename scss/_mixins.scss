@@ -1,0 +1,15 @@
+$breakpoint-up: (
+  "smallPhone": "20em",
+  "phone": "23.4375em",
+  "tablet": "48em",
+  "iPadPro": "64em",
+  "desktop": "75em",
+  "large": "120em",
+  "xLarge": "160em"
+);
+
+@mixin breakpoint-up($device) {
+  @media (min-width: map-get($map: $breakpoint-up, $key: $device)) {
+    @content;
+  }
+}
