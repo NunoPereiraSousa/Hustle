@@ -2,9 +2,15 @@
   width: 100%;
   padding: 1rem 1.5rem;
 
-  &__logo {
-    color: $white;
+  &__logo,
+  &__item {
     font-size: 1.25rem;
+    font-weight: 500;
+    color: $white;
+
+    a {
+      color: $white;
+    }
   }
 
   &__hamb {
@@ -25,6 +31,8 @@
       &:nth-child(2) {
         position: absolute;
         top: 50%;
+        width: 75%;
+        right: 0%;
       }
 
       &:nth-child(3) {

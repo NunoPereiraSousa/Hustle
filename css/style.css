@@ -62,9 +62,14 @@ a:focus {
   padding: 1rem 1.5rem;
 }
 
-.navbar__logo {
-  color: #dfd3c3;
+.navbar__logo, .navbar__item {
   font-size: 1.25rem;
+  font-weight: 500;
+  color: #dfd3c3;
+}
+
+.navbar__logo a, .navbar__item a {
+  color: #dfd3c3;
 }
 
 .navbar__hamb {
@@ -87,6 +92,8 @@ a:focus {
 .navbar__hamb__lines:nth-child(2) {
   position: absolute;
   top: 50%;
+  width: 75%;
+  right: 0%;
 }
 
 .navbar__hamb__lines:nth-child(3) {

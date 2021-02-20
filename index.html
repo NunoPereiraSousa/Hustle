@@ -7,14 +7,27 @@
     <title>Home</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body>
+  <body data-barba="wrapper">
     <nav class="navbar flex flex-jc-sb flex-ai-c">
-      <div class="navbar__logo">Nuno</div>
-      <div class="navbar__hamb">
+      <div class="navbar__logo">
+        <a href="about.html">Hustle</a>
+      </div>
+      <!-- <div class="navbar__hamb">
         <div class="navbar__hamb__lines"></div>
         <div class="navbar__hamb__lines"></div>
         <div class="navbar__hamb__lines"></div>
+      </div> -->
+      <div class="navbar__item">
+        <a href="about.html">About</a>
       </div>
     </nav>
+    <main data-barba="container" data-barba-namespace="home">
+      <section class="first">
+        <h1>Home</h1>
+      </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+    <script src="./js/page_transition.js"></script>
   </body>
 </html>
