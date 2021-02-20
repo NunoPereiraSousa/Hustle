@@ -39,7 +39,12 @@ function pageTransition() {
     y: "100%",
     stagger: 0.25,
     duration: 1,
-    ease: "Expo.easeInOut"
+    ease: "Expo.easeInOut",
+    onComplete: () => {
+      setTimeout(() => {
+        changeTextNav();
+      }, 1000);
+    }
   })
     .to(
       ".loading",
@@ -66,7 +71,7 @@ function contentAnimation() {
     duration: 0.65,
     y: 0,
     stagger: 0.25,
-    delay: 1.75,
+    delay: 1,
     ease: "expo.easeInOut"
   });
 }
@@ -91,3 +96,13 @@ function onLoad() {
 //     ease: "expo.easeinout"
 //   });
 // };
+
+function changeTextNav() {
+  let line__text = document.querySelector(".line__text");
+
+  if (line__text.innerHTML == "About") {
+    line__text.innerHTML = "Home";
+  } else {
+    line__text.innerHTML = "About";
+  }
+}

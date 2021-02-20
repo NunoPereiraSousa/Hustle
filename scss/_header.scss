@@ -1,17 +1,42 @@
 .navbar {
   position: fixed;
+  z-index: 1;
   background-color: transparent;
   width: 100%;
   padding: 1.5rem 1.5rem;
 
   &__logo,
   &__item {
+    position: relative;
+    z-index: 999;
     font-size: 1.25rem;
-    font-weight: 400;
+    font-weight: 500;
     color: $white;
 
     a {
       color: $white;
+
+      .line__text {
+        width: fit-content;
+        position: relative;
+        padding: 0.25rem 0;
+
+        &::after {
+          content: "";
+          position: absolute;
+          z-index: 999;
+          bottom: 0%;
+          left: 0%;
+          height: 2px;
+          width: 0%;
+          background-color: $white;
+          animation: grow-line 0.6s ease-in-out forwards 1.25s;
+        }
+      }
+
+      div {
+        // mix-blend-mode: difference;
+      }
     }
   }
 
