@@ -52,3 +52,17 @@ a:focus {
 .hide {
   overflow: hidden;
 }
+
+.hide-for-mobile {
+  // hide for mobile and tablet
+  @include breakpoint-down(medium) {
+    display: none !important;
+  }
+}
+
+.hide-for-desktop {
+  // hide for mobile and desktop
+  @include breakpoint-up(xLarge) {
+    display: none;
+  }
+}

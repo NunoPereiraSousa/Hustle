@@ -9,8 +9,8 @@
   &__item {
     position: relative;
     z-index: 999;
-    font-size: 1.25rem;
-    font-weight: 500;
+    font-size: $_16px;
+    font-weight: 400;
     color: $white;
 
     a {
@@ -24,10 +24,9 @@
         &::after {
           content: "";
           position: absolute;
-          z-index: 999;
           bottom: 0%;
           left: 0%;
-          height: 2px;
+          height: 1.5px;
           width: 0%;
           background-color: $white;
           animation: grow-line 0.6s ease-in-out forwards 1.25s;

@@ -1,12 +1,44 @@
 @-webkit-keyframes grow-line {
   to {
-    width: 80%;
+    width: 40%;
   }
 }
 
 @keyframes grow-line {
   to {
-    width: 80%;
+    width: 40%;
+  }
+}
+
+@-webkit-keyframes color-variations {
+  0%,
+  100% {
+    color: #d0503e;
+  }
+  25% {
+    color: #259b69;
+  }
+  50% {
+    color: #7c44f1;
+  }
+  75% {
+    color: #133a74;
+  }
+}
+
+@keyframes color-variations {
+  0%,
+  100% {
+    color: #d0503e;
+  }
+  25% {
+    color: #259b69;
+  }
+  50% {
+    color: #7c44f1;
+  }
+  75% {
+    color: #133a74;
   }
 }
 
@@ -78,6 +110,18 @@ a:focus {
   overflow: hidden;
 }
 
+@media (max-width: 63.9375em) {
+  .hide-for-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 160em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
 .navbar {
   position: fixed;
   z-index: 1;
@@ -89,8 +133,8 @@ a:focus {
 .navbar__logo, .navbar__item {
   position: relative;
   z-index: 999;
-  font-size: 1.25rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 400;
   color: #dfd3c3;
 }
 
@@ -109,10 +153,9 @@ a:focus {
 .navbar__logo a .line__text::after, .navbar__item a .line__text::after {
   content: "";
   position: absolute;
-  z-index: 999;
   bottom: 0%;
   left: 0%;
-  height: 2px;
+  height: 1.5px;
   width: 0%;
   background-color: #dfd3c3;
   -webkit-animation: grow-line 0.6s ease-in-out forwards 1.25s;
@@ -162,6 +205,36 @@ a:focus {
 }
 
 .home__first {
-  padding-top: 6rem;
+  padding: 6rem 1.5rem;
+}
+
+.home__first__header {
+  color: #dfd3c3;
+  font-size: 1.0625rem;
+}
+
+.home__first__header:first-child {
+  margin-bottom: 2rem;
+}
+
+.home__first__header span {
+  -webkit-animation: color-variations 10s linear 1s infinite;
+          animation: color-variations 10s linear 1s infinite;
+}
+
+.home__first__header .main {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.25rem 0;
+}
+
+.home__first__header:not(.main) {
+  font-size: 20px;
+  line-height: 1.8;
+  font-weight: 400;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,24 @@
 @keyframes grow-line {
   to {
-    width: 80%;
+    width: 40%;
+  }
+}
+
+@keyframes color-variations {
+  0%,
+  100% {
+    color: $red;
+  }
+
+  25% {
+    color: $green;
+  }
+
+  50% {
+    color: $purple;
+  }
+
+  75% {
+    color: $blue;
   }
 }
