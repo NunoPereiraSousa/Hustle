@@ -172,6 +172,7 @@
 
   @include breakpoint-up(desktop) {
     padding: 0 0 8rem;
+    margin-top: 8rem;
   }
 
   &__image {
@@ -191,6 +192,10 @@
     padding-top: 14.125rem;
 
     &__header {
+      @include breakpoint-up(desktop) {
+        margin-top: 6rem;
+      }
+
       h3 {
         position: relative;
         width: fit-content;
@@ -204,6 +209,10 @@
 
         @include breakpoint-up(tablet) {
           font-size: $_26px;
+        }
+
+        @include breakpoint-up(desktop) {
+          font-size: $_20px;
         }
 
         &::after {
@@ -220,25 +229,54 @@
           @include breakpoint-up(tablet) {
             height: 3px;
           }
+
+          @include breakpoint-up(desktop) {
+            height: 2px;
+          }
         }
       }
     }
 
     &__categories {
-      margin-top: $_90px;
+      margin: $_90px 1.5rem;
       color: $white;
 
+      @include breakpoint-up(tablet) {
+        margin: $_90px 3rem;
+      }
+
+      @include breakpoint-up(desktop) {
+        margin: $_170px 3rem;
+      }
+
+      .categories {
+        margin: $_90px 0;
+      }
+
       .counter {
-        margin: $_96px 0;
-        padding: 0 1.5rem;
+        margin: $_110px 0;
+
+        span {
+          font-size: $_11px;
+        }
 
         @include breakpoint-up(largePhone) {
-          margin: $_110px 0;
+          margin: $_120px 0;
         }
 
         @include breakpoint-up(tablet) {
-          margin: $_130px 0;
+          margin: $_140px 1.5rem;
           font-size: $_24px;
+        }
+
+        @include breakpoint-up(iPadPro) {
+          margin: $_170px 3rem;
+          font-size: $_28px;
+        }
+
+        @include breakpoint-up(desktop) {
+          margin: $_120px 3rem;
+          font-size: $_17px;
         }
       }
 
@@ -254,6 +292,10 @@
           column-gap: 10rem;
         }
 
+        @include breakpoint-up(iPadPro) {
+          column-gap: 18rem;
+        }
+
         h1 {
           margin: 0;
           white-space: nowrap;
@@ -267,18 +309,30 @@
           @include breakpoint-up(tablet) {
             font-size: $_84px;
           }
+
+          @include breakpoint-up(iPadPro) {
+            font-size: $_96px;
+          }
         }
       }
 
       .divider {
-        margin: $_110px 1.5rem;
+        margin: $_110px 0 0;
         border: none;
         background-color: $sand;
         height: 4px;
         width: auto;
 
         @include breakpoint-up(tablet) {
-          margin: $_130px 1.5rem;
+          margin: $_140px 1.5rem;
+        }
+
+        @include breakpoint-up(iPadPro) {
+          margin: $_170px 3rem;
+        }
+
+        @include breakpoint-up(desktop) {
+          margin: $_120px 3rem;
         }
       }
     }
