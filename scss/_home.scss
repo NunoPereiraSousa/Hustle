@@ -2,43 +2,66 @@
   padding: 6rem 1.5rem;
 
   &__header {
+    color: $sand;
+    font-size: $_32px;
+    font-weight: 600;
+    line-height: 3.125rem;
+    margin-bottom: 0;
+  }
+
+  &__group {
+    .arrow {
+      background: $red;
+      height: 2px;
+      width: 70px;
+      margin-left: auto;
+      position: relative;
+      cursor: pointer;
+
+      &:before,
+      &:after {
+        content: "";
+        background: $red;
+        position: absolute;
+        height: 2px;
+        width: 10.25px;
+      }
+
+      &:before {
+        right: -2px;
+        bottom: -3px;
+        transform: rotate(-45deg);
+      }
+
+      &:after {
+        right: -2px;
+        top: -3px;
+        transform: rotate(45deg);
+      }
+    }
+
+    button {
+      margin-left: 20px;
+      background-color: transparent;
+      border: none;
+      color: $red;
+      font-size: $_20px;
+      font-family: "Montserrat";
+      font-weight: 500;
+      margin: 3.4375rem 0 3.4375rem 20px;
+    }
+  }
+
+  &__description {
+    margin-top: 0;
+    font-family: "Raleway";
     color: $white;
-    font-size: $_17px;
+    font-size: $_18px;
+    font-weight: 400;
+    line-height: $_34px;
 
-    &:first-child {
-      margin-bottom: 2rem;
-    }
-
-    span {
-      animation: color-variations 10s linear 1s infinite;
-    }
-
-    .main {
-      font-weight: 600;
-      font-size: 2rem;
-      line-height: 1;
-      //   -webkit-text-stroke-width: 1px;
-      //   -webkit-text-stroke-color: $white;
-      width: fit-content;
-      //   position: relative;
-      padding: 0.25rem 0;
-
-      //   &::after {
-      //     content: "";
-      //     position: absolute;
-      //     bottom: 0%;
-      //     left: 0%;
-      //     height: 3px;
-      //     width: 0%;
-      //     background-color: $white;
-      //     animation: grow-line 1s ease-in-out forwards 4s;
-      //   }
-    }
-
-    &:not(.main) {
-      font-size: 20px;
-      line-height: 1.8;
-      font-weight: 400;
+    @include breakpoint-up(largePhone) {
+      font-size: $_20px;
     }
   }
 }

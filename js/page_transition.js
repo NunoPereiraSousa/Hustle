@@ -34,27 +34,22 @@ function delay(n) {
 
 function pageTransition() {
   let tl = gsap.timeline();
-
-  tl.to(".line", {
-    y: "100%",
-    stagger: 0.25,
-    duration: 1,
-    ease: "Expo.easeInOut",
-    onComplete: () => {
-      setTimeout(() => {
-        changeTextNav();
-      }, 1000);
-    }
+  // .to(".line", {
+  //     y: "100%",
+  //     stagger: 0.25,
+  //     duration: 1,
+  //     ease: "Expo.easeInOut"
+  //     // onComplete: () => {
+  //     //   setTimeout(() => {
+  //     //     changeTextNav();
+  //     //   }, 1000);
+  //     // }
+  //   })
+  tl.to(".loading", {
+    duration: 1.2,
+    height: "100%",
+    ease: "Expo.easeInOut"
   })
-    .to(
-      ".loading",
-      {
-        duration: 1.2,
-        height: "100%",
-        ease: "Expo.easeInOut"
-      },
-      "-=1"
-    )
     .to(".loading", {
       bottom: "100%"
     })
@@ -98,11 +93,10 @@ function onLoad() {
 // };
 
 function changeTextNav() {
-  let line__text = document.querySelector(".line__text");
-
-  if (line__text.innerHTML == "About") {
-    line__text.innerHTML = "Home";
-  } else {
-    line__text.innerHTML = "About";
-  }
+  // let line__text = document.querySelector(".line__text");
+  // if (line__text.innerHTML == "About") {
+  //   line__text.innerHTML = "Home";
+  // } else {
+  //   line__text.innerHTML = "About";
+  // }
 }

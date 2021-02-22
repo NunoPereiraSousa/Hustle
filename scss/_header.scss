@@ -11,10 +11,10 @@
     z-index: 999;
     font-size: $_16px;
     font-weight: 400;
-    color: $white;
+    color: $sand;
 
     a {
-      color: $white;
+      color: $sand;
 
       .line__text {
         width: fit-content;
@@ -28,7 +28,7 @@
           left: 0%;
           height: 1.5px;
           width: 0%;
-          background-color: $white;
+          background-color: $sand;
           animation: grow-line 0.6s ease-in-out forwards 1.25s;
         }
       }
@@ -47,7 +47,7 @@
     &__lines {
       width: 100%;
       height: 2px;
-      background-color: $white;
+      background-color: $sand;
 
       &:nth-child(1) {
         position: absolute;
