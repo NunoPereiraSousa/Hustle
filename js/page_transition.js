@@ -62,25 +62,61 @@ function pageTransition() {
 function contentAnimation() {
   let tl = gsap.timeline();
 
-  tl.to(".line", {
+  tl.to(".nav-line", {
     duration: 0.65,
     y: 0,
     stagger: 0.25,
     delay: 1,
     ease: "expo.easeInOut"
-  });
+  })
+    .to(
+      ".line",
+      {
+        duration: 0.95,
+        y: 0,
+        stagger: 0.25,
+        ease: "expo.easeInOut"
+      },
+      "-=1.5"
+    )
+    .to(
+      ".home-line",
+      {
+        duration: 0.95,
+        y: 0,
+        stagger: 0.25,
+        ease: "expo.easeInOut"
+      },
+      "-=1.5"
+    );
 }
 
 function onLoad() {
   let tl = gsap.timeline();
 
-  tl.to(".line", {
+  tl.to(".nav-line", {
     duration: 0.65,
     y: 0,
     stagger: 0.25,
     delay: 0.5,
     ease: "expo.easeInOut"
-  });
+  })
+    .to(".line", {
+      duration: 0.95,
+      y: 0,
+      stagger: 0.25,
+      ease: "expo.easeInOut"
+    })
+    .to(
+      ".home-line",
+      {
+        duration: 0.95,
+        y: 0,
+        stagger: 0.25,
+        ease: "expo.easeInOut"
+      },
+      "-=1.5"
+    );
 }
 
 // window.onload = () => {

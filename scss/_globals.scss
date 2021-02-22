@@ -14,6 +14,10 @@ body {
   background-color: $black;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 a,
 a:visited,
 a:hover,
@@ -26,6 +30,10 @@ a:focus {
 
   &-fd-c {
     flex-direction: column;
+  }
+
+  &-jc-c {
+    justify-content: center;
   }
 
   &-jc-sb {
@@ -45,24 +53,24 @@ a:focus {
   display: grid;
 }
 
+.nav-line,
+.home-line,
 .line {
   transform: translateY(100%);
 }
 
-.hide {
+.overflow {
   overflow: hidden;
 }
 
 .hide-for-mobile {
-  // hide for mobile and tablet
-  @include breakpoint-down(tablet) {
-    display: none;
+  @include breakpoint-down(iPadPro) {
+    display: none !important;
   }
 }
 
 .hide-for-desktop {
-  // hide for mobile and desktop
-  @include breakpoint-up(xLarge) {
-    display: none;
+  @include breakpoint-up(iPadPro) {
+    display: none !important;
   }
 }

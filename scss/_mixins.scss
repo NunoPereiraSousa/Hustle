@@ -13,12 +13,6 @@ $breakpoint-up: (
   "xLarge": "160em"
 );
 
-@mixin breakpoint-up($device) {
-  @media (min-width: map-get($map: $breakpoint-up, $key: $device)) {
-    @content;
-  }
-}
-
 // 639px, 1023px, 1399px
 $breakpoint-down: (
   "smallPhone": "19.9375em",
@@ -31,8 +25,14 @@ $breakpoint-down: (
   "xLarge": "160em"
 );
 
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($map: $breakpoint-up, $key: $size)) {
+    @content;
+  }
+}
+
 @mixin breakpoint-down($size) {
-  @media (min-width: map-get($map: $breakpoint-down, $key: $size)) {
+  @media (max-width: map-get($map: $breakpoint-down, $key: $size)) {
     @content;
   }
 }

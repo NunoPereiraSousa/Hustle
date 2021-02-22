@@ -13,7 +13,7 @@
     <nav class="navbar flex flex-jc-sb flex-ai-c">
       <div class="navbar__logo">
         <a href="/"
-          ><div class="hide"><div class="line">Hustle</div></div></a
+          ><div class="overflow"><div class="nav-line">Hustle</div></div></a
         >
       </div>
       <!-- <div class="navbar__hamb">
@@ -23,79 +23,99 @@
       </div> -->
       <div class="navbar__item">
         <a href="about.html" class="selected"
-          ><div class="hide"><div class="line line__text">About</div></div>
+          ><div class="overflow">
+            <div class="nav-line line__text">About</div>
+          </div>
         </a>
       </div>
     </nav>
     <main data-barba="container" data-barba-namespace="home">
       <section class="home__first">
         <h1 class="home__first__header">
-          <div class="hide">
+          <div class="overflow">
             <div class="line">Hi, I'm Nuno, a web</div>
           </div>
-          <div class="hide">
+          <div class="overflow">
             <div class="line">developer, teacher</div>
           </div>
-          <div class="hide">
+          <div class="overflow">
             <div class="line">and athlete.</div>
           </div>
         </h1>
         <div class="home__first__group flex flex-ai-c">
           <div class="arrow"></div>
-          <button class="home__first__button">more about me</button>
+          <a href="about.html" class="home__first__button">more about me</a>
         </div>
-        <!-- <h1 class="home__first__description hide-for-mobile">
-          <div class="hide">
-            <div class="line">A senior college student with the</div>
+        <div class="hide-for-desktop">
+          <div class="home__first__wrapper">
+            <h1 class="home__first__wrapper__description">
+              <div class="overflow">
+                <div class="line">A senior college student with the</div>
+              </div>
+              <div class="overflow">
+                <div class="line">highest GPA for a web development</div>
+              </div>
+              <div class="overflow">
+                <div class="line">degree. Helping people achieving their</div>
+              </div>
+              <div class="overflow">
+                <div class="line">maximum potential is also a passion,</div>
+              </div>
+              <div class="overflow">
+                <div class="line">and something I strive to do 24/ 7.</div>
+              </div>
+            </h1>
           </div>
-          <div class="hide">
-            <div class="line">highest GPA for a web development</div>
+        </div>
+        <div class="hide-for-mobile">
+          <div class="home__first__wrapper">
+            <h1 class="home__first__wrapper__description">
+              <div class="overflow">
+                <div class="home-line">
+                  A senior college student with the highest GPA for a web
+                </div>
+              </div>
+              <div class="overflow">
+                <div class="home-line">
+                  development degree. I'm passionate about learning
+                </div>
+              </div>
+              <div class="overflow">
+                <div class="home-line">
+                  the latest and greatest technologies whether that's
+                </div>
+              </div>
+              <div class="overflow">
+                <div class="home-line">
+                  front-end or back-end. Helping people achieving their
+                </div>
+              </div>
+              <div class="overflow">
+                <div class="home-line">
+                  maximum potential is also a passion, and something I
+                </div>
+              </div>
+              <div class="overflow">
+                <div class="home-line">strive to do 24/ 7.</div>
+              </div>
+            </h1>
           </div>
-          <div class="hide">
-            <div class="line">degree. Helping people achieving their</div>
-          </div>
-          <div class="hide">
-            <div class="line">maximum potential is also a passion,</div>
-          </div>
-          <div class="hide">
-            <div class="line">and something I strive to do 24/ 7.</div>
-          </div>
-        </h1> -->
-        <h1 class="home__first__description hide-for-desktop">
-          <div class="hide">
-            <div class="line">
-              A senior college student with the highest GPA for a web
-            </div>
-          </div>
-          <div class="hide">
-            <div class="line">
-              development degree. I'm passionate about learning
-            </div>
-          </div>
-          <div class="hide">
-            <div class="line">
-              the latest and greatest technologies whether that's
-            </div>
-          </div>
-          <div class="hide">
-            <div class="line">
-              front-end or back-end. Helping people achieving
-            </div>
-          </div>
-          <div class="hide">
-            <div class="line">
-              their maximum potential is also a passion, and
-            </div>
-          </div>
-          <div class="hide">
-            <div class="line">something I strive to do 24/ 7.</div>
-          </div>
-        </h1>
+        </div>
       </section>
-      <section class="home__second"></section>
+      <section class="home__second">
+        <div class="home__second__image flex flex-jc-c">
+          <img src="./assets/svg/Circle01.svg" alt="Circle 1" />
+        </div>
+        <div class="home__second__content">
+          <div class="home__second__content__header flex flex-jc-c">
+            <h3>What I do</h3>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
     <script src="./js/page_transition.js"></script>
+    <script src="./js/home_transitions.js"></script>
   </body>
 </html>

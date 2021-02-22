@@ -1,5 +1,6 @@
 .home__first {
   padding: 6rem 1.5rem;
+  height: 100vh;
 
   @include breakpoint-up(tablet) {
     padding: 6rem 3rem;
@@ -7,6 +8,11 @@
 
   @include breakpoint-up(iPadPro) {
     padding: 6rem 5rem;
+  }
+
+  @include breakpoint-up(desktop) {
+    padding: 8rem 7.5rem;
+    height: auto;
   }
 
   &__header {
@@ -26,10 +32,28 @@
       font-size: $_84px;
       line-height: $_120px;
     }
+
+    @include breakpoint-up(desktop) {
+      font-size: $_90px;
+      line-height: $_120px;
+    }
+
+    @include breakpoint-up(large) {
+      font-size: $_110px;
+      line-height: $_150px;
+    }
   }
 
   &__group {
     justify-content: flex-start;
+
+    @include breakpoint-up(desktop) {
+      margin-bottom: 7rem;
+    }
+
+    // @include breakpoint-up(large) {
+    //   margin-bottom: 10rem;
+    // }
 
     .arrow {
       background: $red;
@@ -65,7 +89,7 @@
       }
     }
 
-    button {
+    a {
       margin-left: 20px;
       background-color: transparent;
       border: none;
@@ -85,37 +109,107 @@
         font-size: $_28px;
         margin: 5rem 0 5rem 1.25rem;
       }
+
+      @include breakpoint-up(desktop) {
+        font-size: $_22px;
+        margin: 5rem 0 5rem 1.25rem;
+      }
     }
   }
 
-  &__description {
-    margin-top: 0;
-    font-family: "Raleway";
-    color: $white;
-    font-size: $_18px;
-    font-weight: 400;
-    line-height: $_34px;
-
-    @include breakpoint-up(largePhone) {
-      font-size: $_20px;
-    }
-
-    @include breakpoint-up(tablet) {
-      font-size: $_26px;
-      line-height: $_40px;
-    }
-
-    @include breakpoint-up(iPadPro) {
-      font-size: $_32px;
-      line-height: $_54px;
-    }
-
+  &__wrapper {
     @include breakpoint-up(desktop) {
       text-align: left;
       width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+
+    &.hide-for-desktop {
+      @include breakpoint-up(iPadPro) {
+        display: none;
+      }
+    }
+
+    &__description {
+      margin-top: 0;
+      font-family: "Raleway";
+      color: $white;
+      font-size: $_18px;
+      font-weight: 400;
+      line-height: $_34px;
+
+      @include breakpoint-up(largePhone) {
+        font-size: $_20px;
+      }
+
+      @include breakpoint-up(tablet) {
+        font-size: $_26px;
+        line-height: $_40px;
+      }
+
+      @include breakpoint-up(iPadPro) {
+        font-size: $_32px;
+        line-height: $_54px;
+      }
+    }
+  }
+}
+
+.home__second {
+  padding: 0 0 6rem;
+  position: relative;
+  background-color: $red;
+  height: 500vh;
+
+  @include breakpoint-up(tablet) {
+    padding: 0 3rem 6rem;
+  }
+
+  @include breakpoint-up(iPadPro) {
+    padding: 0 5rem 6rem;
+  }
+
+  @include breakpoint-up(desktop) {
+    padding: 0 7.5rem 8rem;
+  }
+
+  &__image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: -3.5625rem;
+    img {
+      width: 11.125rem;
+      height: 100%;
+      animation: spin 16s linear infinite;
+    }
+  }
+
+  &__content {
+    padding-top: 14.125rem;
+    &__header {
+      h3 {
+        position: relative;
+        width: fit-content;
+        color: $white;
+        font-size: $_18px;
+        font-weight: 500;
+
+        &::after {
+          content: "";
+          background-color: $white;
+          height: 2px;
+          width: 30%;
+          position: absolute;
+          bottom: calc(0% - 0.75rem);
+          left: 50%;
+          transform-origin: center;
+          transform: translateX(-50%);
+        }
+      }
     }
   }
 }
