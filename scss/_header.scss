@@ -5,6 +5,14 @@
   width: 100%;
   padding: 1.5rem 1.5rem;
 
+  @include breakpoint-up(tablet) {
+    padding: 2.5rem 3rem;
+  }
+
+  @include breakpoint-up(iPadPro) {
+    padding: 3.5rem 5rem;
+  }
+
   &__logo,
   &__item {
     position: relative;

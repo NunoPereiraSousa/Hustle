@@ -110,9 +110,9 @@ a:focus {
   overflow: hidden;
 }
 
-@media (max-width: 63.9375em) {
+@media (min-width: 47.9375em) {
   .hide-for-mobile {
-    display: none !important;
+    display: none;
   }
 }
 
@@ -128,6 +128,18 @@ a:focus {
   background-color: transparent;
   width: 100%;
   padding: 1.5rem 1.5rem;
+}
+
+@media (min-width: 48em) {
+  .navbar {
+    padding: 2.5rem 3rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .navbar {
+    padding: 3.5rem 5rem;
+  }
 }
 
 .navbar__logo, .navbar__item {
@@ -208,12 +220,45 @@ a:focus {
   padding: 6rem 1.5rem;
 }
 
+@media (min-width: 48em) {
+  .home__first {
+    padding: 6rem 3rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .home__first {
+    padding: 6rem 5rem;
+  }
+}
+
 .home__first__header {
   color: #dfd3c3;
   font-size: 2rem;
   font-weight: 600;
   line-height: 3.125rem;
   margin-bottom: 0;
+  letter-spacing: -0.5px;
+}
+
+@media (min-width: 48em) {
+  .home__first__header {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .home__first__header {
+    font-size: 5.25rem;
+    line-height: 7.5rem;
+  }
+}
+
+.home__first__group {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .home__first__group .arrow {
@@ -223,6 +268,12 @@ a:focus {
   margin-left: auto;
   position: relative;
   cursor: pointer;
+}
+
+@media (min-width: 75em) {
+  .home__first__group .arrow {
+    margin-left: 0;
+  }
 }
 
 .home__first__group .arrow:before, .home__first__group .arrow:after {
@@ -254,8 +305,23 @@ a:focus {
   color: #d0503e;
   font-size: 1.25rem;
   font-family: "Montserrat";
-  font-weight: 500;
-  margin: 3.4375rem 0 3.4375rem 20px;
+  font-weight: 400;
+  margin: 3.4375rem 0 3.4375rem 1.25rem;
+  letter-spacing: -0.25px;
+}
+
+@media (min-width: 48em) {
+  .home__first__group button {
+    font-size: 1.5rem;
+    margin: 3.8rem 0 3.8rem 1.25rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .home__first__group button {
+    font-size: 1.75rem;
+    margin: 5rem 0 5rem 1.25rem;
+  }
 }
 
 .home__first__description {
@@ -270,6 +336,37 @@ a:focus {
 @media (min-width: 25.875em) {
   .home__first__description {
     font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 48em) {
+  .home__first__description {
+    font-size: 1.625rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .home__first__description {
+    font-size: 2rem;
+    line-height: 3.375rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .home__first__description {
+    text-align: left;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 /*# sourceMappingURL=style.css.map */

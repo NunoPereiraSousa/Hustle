@@ -55,8 +55,8 @@ a:focus {
 
 .hide-for-mobile {
   // hide for mobile and tablet
-  @include breakpoint-down(medium) {
-    display: none !important;
+  @include breakpoint-down(tablet) {
+    display: none;
   }
 }
 
