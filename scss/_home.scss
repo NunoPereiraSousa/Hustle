@@ -338,3 +338,205 @@
     }
   }
 }
+
+.home__third {
+  padding: 0 0 6rem;
+  position: relative;
+
+  @include breakpoint-up(tablet) {
+    padding: 0 0 6rem;
+  }
+
+  @include breakpoint-up(iPadPro) {
+    padding: 0 0 6rem;
+  }
+
+  @include breakpoint-up(desktop) {
+    padding: 0 0 8rem;
+  }
+
+  &__image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: -3.5625rem;
+
+    img {
+      width: 11.125rem;
+      height: 100%;
+      animation: spin 16s linear infinite;
+    }
+  }
+
+  &__content {
+    padding-top: 14.125rem;
+
+    // @include breakpoint-up(desktop) {
+    //   padding: 0 8rem;
+    // }
+
+    &__header {
+      @include breakpoint-up(desktop) {
+        margin-top: 6rem;
+      }
+
+      h3 {
+        position: relative;
+        width: fit-content;
+        color: $white;
+        font-size: $_18px;
+        font-weight: 500;
+
+        sup {
+          font-size: $_15px;
+          margin-left: 0.1rem;
+        }
+
+        @include breakpoint-up(largePhone) {
+          font-size: $_20px;
+        }
+
+        @include breakpoint-up(tablet) {
+          font-size: $_26px;
+        }
+
+        @include breakpoint-up(desktop) {
+          font-size: $_20px;
+        }
+
+        &::after {
+          content: "";
+          background-color: $white;
+          height: 2px;
+          width: 30%;
+          position: absolute;
+          bottom: calc(0% - 0.75rem);
+          left: 50%;
+          transform-origin: center;
+          transform: translateX(-50%);
+
+          @include breakpoint-up(tablet) {
+            height: 3px;
+          }
+
+          @include breakpoint-up(desktop) {
+            height: 2px;
+          }
+        }
+      }
+    }
+  }
+
+  &__projects {
+    margin: $_90px 0;
+
+    @include breakpoint-up(iPadPro) {
+      display: flex;
+    }
+
+    @include breakpoint-up(desktop) {
+      margin: $_140px 0;
+    }
+
+    &__item {
+      border-bottom: 2px solid $sand;
+
+      &:first-child {
+        border-top: 2px solid $sand;
+      }
+
+      @include breakpoint-up(iPadPro) {
+        border: 2px solid $sand;
+        width: calc(100vw / 8);
+        height: calc(100vh - 60px);
+        transform: rotate(180deg);
+      }
+
+      @include breakpoint-up(desktop) {
+        height: calc(100vh - 30px);
+      }
+
+      &:hover {
+        background-color: $sand;
+      }
+
+      &:hover h3 {
+        color: $black;
+      }
+
+      &__info {
+        padding: 0.75rem 1rem;
+        display: flex;
+        justify-content: space-between;
+
+        @include breakpoint-up(largePhone) {
+          padding: 1rem;
+        }
+
+        @include breakpoint-up(tablet) {
+          padding: 2rem 3rem;
+        }
+
+        @include breakpoint-up(iPadPro) {
+          height: 100%;
+          padding: 4rem 3rem;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        @include breakpoint-up(desktop) {
+          padding: 3rem 0;
+        }
+
+        h3 {
+          text-transform: uppercase;
+          color: $black;
+          font-weight: 500;
+          font-family: "Montserrat";
+          letter-spacing: -0.25px;
+          font-size: $_16px;
+          color: $sand;
+
+          @include breakpoint-up(largePhone) {
+            font-size: $_18px;
+          }
+
+          @include breakpoint-up(largePhone) {
+            font-size: $_26px;
+          }
+
+          @include breakpoint-up(iPadPro) {
+            white-space: nowrap;
+            writing-mode: vertical-lr;
+          }
+
+          @include breakpoint-up(desktop) {
+            margin: 0;
+            font-size: $_24px;
+            letter-spacing: 2px;
+          }
+
+          span {
+            font-size: $_12px;
+            vertical-align: text-top;
+            color: $red;
+            margin-right: $_12px;
+
+            @include breakpoint-up(largePhone) {
+              font-size: $_24px;
+              margin-right: $_24px;
+            }
+
+            @include breakpoint-up(iPadPro) {
+              font-size: $_24px;
+              writing-mode: vertical-lr;
+              margin-bottom: $_30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
