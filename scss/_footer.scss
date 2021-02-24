@@ -1,0 +1,18 @@
+footer {
+  p {
+    margin: $_20px 0;
+    text-align: center;
+    font-size: $_14px;
+    color: $sand;
+    letter-spacing: -0.25px;
+
+    span {
+      color: $red;
+    }
+
+    @include breakpoint-up(tablet) {
+      margin: $_30px 0;
+      font-size: $_16px;
+    }
+  }
+}

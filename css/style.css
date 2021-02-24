@@ -68,6 +68,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   font-family: "Montserrat";
+  letter-spacing: -0.25px;
   font-size: 1rem;
   width: 100%;
   background-color: #171717;
@@ -233,6 +234,25 @@ a:focus {
 .navbar__hamb__lines:nth-child(3) {
   position: absolute;
   top: 100%;
+}
+
+footer p {
+  margin: 1.25rem 0;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #dfd3c3;
+  letter-spacing: -0.25px;
+}
+
+footer p span {
+  color: #d0503e;
+}
+
+@media (min-width: 48em) {
+  footer p {
+    margin: 1.875rem 0;
+    font-size: 1rem;
+  }
 }
 
 .loading {
@@ -487,6 +507,11 @@ a:focus {
           animation: spin 16s linear infinite;
 }
 
+.home__second__image img:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
 .home__second__content {
   padding-top: 14.125rem;
 }
@@ -728,6 +753,11 @@ a:focus {
           animation: spin 16s linear infinite;
 }
 
+.home__third__image img:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
 .home__third__content {
   padding-top: 14.125rem;
 }
@@ -952,6 +982,173 @@ a:focus {
         -ms-writing-mode: tb-lr;
             writing-mode: vertical-lr;
     margin-bottom: 1.875rem;
+  }
+}
+
+.contact {
+  background-color: #dfd3c3;
+  position: relative;
+}
+
+@media (min-width: 48em) {
+  .contact {
+    padding: 0 0 2rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .contact {
+    padding: 0 0 6rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .contact {
+    padding: 0 0 8rem;
+  }
+}
+
+.contact__image {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: -3.5625rem;
+}
+
+.contact__image img {
+  width: 11.125rem;
+  height: 100%;
+  -webkit-animation: spin 16s linear infinite;
+          animation: spin 16s linear infinite;
+}
+
+.contact__image img:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.contact__content {
+  padding: 14.125rem 1.5rem 0;
+}
+
+@media (min-width: 48em) {
+  .contact__content__header {
+    margin: 0 3rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .contact__content__header {
+    margin: 0 6rem;
+  }
+}
+
+.contact__content__header h1 {
+  color: #171717;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.875rem;
+  margin-bottom: 3.75rem;
+}
+
+.contact__content__header h1 span {
+  color: #d0503e;
+}
+
+@media (min-width: 25.875em) {
+  .contact__content__header h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 48em) {
+  .contact__content__header h1 {
+    font-size: 1.625rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .contact__content__header h1 {
+    font-size: 2.125rem;
+    line-height: 3.375rem;
+  }
+}
+
+.contact__grid {
+  row-gap: 3.125rem;
+}
+
+@media (min-width: 48em) {
+  .contact__grid {
+    margin: 5.625rem 3rem;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    row-gap: 4.375rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .contact__grid {
+    margin: 5.625rem 6rem 0;
+  }
+}
+
+.contact__grid h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-family: "Montserrat";
+  margin-bottom: 0;
+}
+
+@media (min-width: 25.875em) {
+  .contact__grid h3 {
+    font-size: 1.25rem;
+  }
+}
+
+.contact__grid p,
+.contact__grid a {
+  color: #616161;
+  margin-top: 0.625rem;
+  margin-bottom: 0;
+  font-weight: 500;
+  letter-spacing: 0.05px;
+  font-size: 1.0625rem;
+  font-family: "Raleway";
+}
+
+@media (min-width: 25.875em) {
+  .contact__grid p,
+  .contact__grid a {
+    font-size: 1.1875rem;
+    margin-top: 1.25rem;
+  }
+}
+
+.contact__grid .media {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 48em) {
+  .contact__grid .media {
+    width: 60%;
   }
 }
 /*# sourceMappingURL=style.css.map */
