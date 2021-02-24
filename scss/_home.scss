@@ -162,6 +162,7 @@
 .home__second {
   padding: 0 0 6rem;
   position: relative;
+  margin: 0 2rem;
   background-color: $red;
 
   @include breakpoint-up(tablet) {
@@ -197,6 +198,7 @@
 
   &__content {
     padding-top: 14.125rem;
+    transition: all 0.5s ease;
 
     &__header {
       @include breakpoint-up(desktop) {
@@ -587,7 +589,7 @@
   }
 
   &__content {
-    padding: 14.125rem 1.5rem 0;
+    padding: 14.125rem 1.5rem 6rem;
 
     &__header {
       @include breakpoint-up(tablet) {
@@ -678,7 +680,7 @@
 
     .media {
       height: fit-content;
-      width: 80%;
+      width: 70%;
       display: flex;
       justify-content: space-between;
       align-items: center;

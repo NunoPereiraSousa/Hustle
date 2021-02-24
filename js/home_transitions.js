@@ -5,25 +5,38 @@ let timeline = gsap.timeline();
 gsap.to(".home-desktop-line", {
   scrollTrigger: {
     trigger: ".home-desktop-line",
-    start: "center center",
-    markers: true
+    start: "-50% center"
   },
   y: 0,
   stagger: 0.25,
   duration: 0.65
 });
 
+gsap.to(".home__second", {
+  scrollTrigger: {
+    trigger: ".home-line",
+    start: "bottom center",
+    end: "bottom",
+    markers: true
+  },
+  margin: "0 0",
+  duration: 0.65
+});
+
 let fe = document.querySelector(".fe");
 let be = document.querySelector(".be");
+let tt = document.querySelector(".tt");
+let uiux = document.querySelector(".uiux");
 
-gsap.to(fe, {
+gsap.to([fe, be, tt, uiux], {
   scrollTrigger: {
-    trigger: fe,
-    scrub: true,
-    start: "center center"
-    // markers: true
+    trigger: ".home__second__content",
+    scrub: 1,
+    start: "top center",
+    end: "bottom",
+    markers: true
   },
-  x: -750,
+  xPercent: -150,
   stagger: 0.25,
   duration: 0.65
 });
@@ -32,8 +45,8 @@ gsap.to(fe, {
 gsap.to(".home__second", {
   scrollTrigger: {
     trigger: ".counter__be",
-    start: "center center",
-    markers: true
+    start: "center center"
+    // markers: true
   },
   backgroundColor: "#259b69",
   duration: 0.65
@@ -44,8 +57,8 @@ gsap.to(".home__second", {
   scrollTrigger: {
     trigger: ".counter__tt",
     start: "center center",
-    end: "center center",
-    markers: true
+    end: "center center"
+    // markers: true
   },
   backgroundColor: "#133a74",
   duration: 0.65
@@ -56,8 +69,8 @@ gsap.to(".home__second", {
   scrollTrigger: {
     trigger: ".counter__uiux",
     start: "center center",
-    end: "center center",
-    markers: true
+    end: "center center"
+    // markers: true
   },
   backgroundColor: "#7c44f1",
   duration: 0.65
