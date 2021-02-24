@@ -59,6 +59,7 @@ function pageTransition() {
     });
 }
 
+// page loads for the first time
 function contentAnimation() {
   let tl = gsap.timeline();
 
@@ -101,16 +102,31 @@ function onLoad() {
     delay: 0.5,
     ease: "expo.easeInOut"
   })
-    .to(".line", {
-      duration: 0.95,
+    .to(
+      ".line",
+      {
+        duration: 0.95,
+        y: 0,
+        stagger: 0.25,
+        ease: "expo.easeInOut"
+      },
+      "-=0.25"
+    )
+    .to(".arrow-line", {
+      duration: 0.65,
       y: 0,
-      stagger: 0.25,
+      ease: "expo.easeInOut"
+    })
+    .to(".arrow", {
+      duration: 0.4,
+      x: 0,
+      opacity: 1,
       ease: "expo.easeInOut"
     })
     .to(
       ".home-line",
       {
-        duration: 0.95,
+        duration: 0.65,
         y: 0,
         stagger: 0.25,
         ease: "expo.easeInOut"

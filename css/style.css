@@ -128,6 +128,8 @@ a:focus {
 
 .nav-line,
 .home-line,
+.home-desktop-line,
+.arrow-line,
 .line {
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
@@ -348,6 +350,9 @@ footer p span {
   margin-left: auto;
   position: relative;
   cursor: pointer;
+  -webkit-transform: translateX(-20%);
+          transform: translateX(-20%);
+  opacity: 0;
 }
 
 @media (min-width: 75em) {
