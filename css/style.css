@@ -1291,6 +1291,56 @@ footer p span {
           animation-play-state: paused;
 }
 
+.contact__connect {
+  padding: 14.125rem 1.5rem 6rem;
+}
+
+.contact__connect h1 {
+  color: #171717;
+  margin: 0;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.contact__connect__info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+}
+
+.contact__connect__info .email {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 1 / 2;
+}
+
+.contact__connect__info .location {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.contact__connect__info .social1 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 3 / 1 / 3 / 3;
+}
+
+.contact__connect__info .social2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: 3 / 2 / 3 / 4;
+}
+
 .contact__content {
   padding: 14.125rem 1.5rem 6rem;
 }
@@ -1309,14 +1359,15 @@ footer p span {
 
 .contact__content__header h1 {
   color: #171717;
-  font-size: 2rem;
+  font-size: 1.0625rem;
   font-weight: 700;
   line-height: 2.875rem;
-  margin-bottom: 3.75rem;
+  margin-bottom: 1.875rem;
 }
 
 .contact__content__header h1 span {
   color: #d0503e;
+  font-style: italic;
 }
 
 @media (min-width: 25.875em) {
@@ -1339,7 +1390,7 @@ footer p span {
 }
 
 .contact__grid {
-  row-gap: 3.125rem;
+  row-gap: 1.875rem;
 }
 
 @media (min-width: 48em) {
@@ -1353,7 +1404,7 @@ footer p span {
 
 @media (min-width: 75em) {
   .contact__grid {
-    margin: 5.625rem 6rem 0;
+    margin: 5.625rem 12vw 0;
   }
 }
 
