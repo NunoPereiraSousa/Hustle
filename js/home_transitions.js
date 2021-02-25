@@ -16,8 +16,7 @@ gsap.to(".home__second", {
   scrollTrigger: {
     trigger: ".home-line",
     start: "bottom center",
-    end: "bottom",
-    markers: true
+    end: "bottom"
   },
   margin: "0 0",
   duration: 0.65
@@ -33,11 +32,42 @@ gsap.to([fe, be, tt, uiux], {
     trigger: ".home__second__content",
     scrub: 1,
     start: "top center",
-    end: "bottom",
-    markers: true
+    end: "bottom"
   },
-  xPercent: -150,
+  xPercent: -100,
   stagger: 0.25,
+  duration: 0.65
+});
+
+gsap.to(".home__second", {
+  scrollTrigger: {
+    trigger: ".home__second",
+    start: "top top",
+    end: "top top",
+    onEnterBack: () => {
+      document.querySelector(".home__second").classList.remove("green");
+    }
+  },
+  duration: 0.65
+});
+
+// background change when passes FE
+gsap.to(".home__second", {
+  scrollTrigger: {
+    trigger: ".counter__fe",
+    start: "center center",
+    onEnter: () => {
+      document.querySelector(".home__second").classList.add("green");
+    },
+    onEnterBack: () => {
+      document.querySelector(".home__second").classList.remove("blue");
+      document.querySelector(".home__second").classList.add("green");
+    },
+    onLeave: () => {
+      document.querySelector(".home__second").classList.remove("green");
+      document.querySelector(".home__second").classList.add("blue");
+    }
+  },
   duration: 0.65
 });
 
@@ -45,10 +75,20 @@ gsap.to([fe, be, tt, uiux], {
 gsap.to(".home__second", {
   scrollTrigger: {
     trigger: ".counter__be",
-    start: "center center"
-    // markers: true
+    start: "center center",
+    markers: true,
+    onEnter: () => {
+      document.querySelector(".home__second").classList.add("blue");
+    },
+    onEnterBack: () => {
+      document.querySelector(".home__second").classList.add("blue");
+      document.querySelector(".home__second").classList.remove("yellow");
+    },
+    onLeave: () => {
+      document.querySelector(".home__second").classList.remove("blue");
+      document.querySelector(".home__second").classList.add("yellow");
+    }
   },
-  backgroundColor: "#259b69",
   duration: 0.65
 });
 
@@ -57,10 +97,19 @@ gsap.to(".home__second", {
   scrollTrigger: {
     trigger: ".counter__tt",
     start: "center center",
-    end: "center center"
-    // markers: true
+    markers: true,
+    onEnter: () => {
+      document.querySelector(".home__second").classList.add("yellow");
+    },
+    onEnterBack: () => {
+      document.querySelector(".home__second").classList.add("yellow");
+      document.querySelector(".home__second").classList.remove("purple");
+    },
+    onLeave: () => {
+      document.querySelector(".home__second").classList.remove("yellow");
+      document.querySelector(".home__second").classList.add("purple");
+    }
   },
-  backgroundColor: "#133a74",
   duration: 0.65
 });
 
@@ -69,9 +118,16 @@ gsap.to(".home__second", {
   scrollTrigger: {
     trigger: ".counter__uiux",
     start: "center center",
-    end: "center center"
-    // markers: true
+    markers: true,
+    onEnter: () => {
+      document.querySelector(".home__second").classList.add("purple");
+    },
+    onEnterBack: () => {
+      document.querySelector(".home__second").classList.add("purple");
+    },
+    onLeave: () => {
+      document.querySelector(".home__second").classList.remove("purple");
+    }
   },
-  backgroundColor: "#7c44f1",
   duration: 0.65
 });

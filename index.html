@@ -33,6 +33,8 @@
       data-barba="container"
       data-barba-namespace="home"
       class="main__container"
+      id="my-scrollbar"
+      data-scrollbar
     >
       <section class="home__first">
         <h1 class="home__first__header">
@@ -125,7 +127,9 @@
           <div class="home__second__content__categories">
             <div class="front_end categories">
               <div class="counter counter__fe"><span>&#9679;</span> 01</div>
-              <div class="category grid fe">
+              <div class="category flex fe">
+                <h1>Front-End</h1>
+                <h1>Front-End</h1>
                 <h1>Front-End</h1>
                 <h1>Front-End</h1>
                 <h1>Front-End</h1>
@@ -135,7 +139,9 @@
             </div>
             <div class="back_end categories">
               <div class="counter counter__be"><span>&#9679;</span> 02</div>
-              <div class="category grid be">
+              <div class="category flex be">
+                <h1>Back-End</h1>
+                <h1>Back-End</h1>
                 <h1>Back-End</h1>
                 <h1>Back-End</h1>
                 <h1>Back-End</h1>
@@ -145,7 +151,9 @@
             </div>
             <div class="teach_tutor categories">
               <div class="counter counter__tt"><span>&#9679;</span> 03</div>
-              <div class="category grid tt">
+              <div class="category flex tt">
+                <h1>Teaching</h1>
+                <h1>Tutoring</h1>
                 <h1>Teaching</h1>
                 <h1>Tutoring</h1>
                 <h1>Teaching</h1>
@@ -155,10 +163,12 @@
             </div>
             <div class="ui_ux categories">
               <div class="counter counter__uiux"><span>&#9679;</span> 04</div>
-              <div class="category grid uiux">
+              <div class="category flex uiux">
                 <h1>UI Design</h1>
                 <h1>UX Design</h1>
                 <h1>UI Design</h1>
+                <h1>UI Design</h1>
+                <h1>UX Design</h1>
                 <h1>UX Design</h1>
               </div>
               <hr class="divider" />
@@ -240,15 +250,19 @@
           <div class="contact__grid grid">
             <div class="contact__location">
               <h3>Located In</h3>
-              <p>oPorto, Portugal</p>
+              <a href="https://maps.google.com/?q=Porto" target="blank"
+                >oPorto, Portugal</a
+              >
             </div>
             <div class="contact__email">
               <h3>Send me an email</h3>
-              <p>nunopereirasousa00@gmail.com</p>
+              <a href="mailto:nunopereirasousa00@gmail.com"
+                >nunopereirasousa00@gmail.com</a
+              >
             </div>
             <div class="contact__chat">
               <h3>Let's chat</h3>
-              <p>(+351) 911-587-712</p>
+              <a href="tel:+911 587 712">(+351) 911-587-712</a>
             </div>
             <div class="contact__socials">
               <h3>My socials</h3>
@@ -289,5 +303,12 @@
     <script src="./js/page_transition.js"></script>
     <script src="./js/home_transitions.js"></script>
     <script src="./js/smooth_scroll.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.6.0/smooth-scrollbar.js"></script> -->
+
+    <script>
+      var Scrollbar = window.Scrollbar;
+      // Scrollbar.initAll();
+      // Scrollbar.init(document.querySelector("#my-scrollbar"), options);
+    </script>
   </body>
 </html>

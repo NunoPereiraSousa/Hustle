@@ -164,6 +164,23 @@
   position: relative;
   margin: 0 2rem;
   background-color: $red;
+  transition: all 500ms;
+
+  &.green {
+    background-color: $green !important;
+  }
+
+  &.blue {
+    background-color: $blue !important;
+  }
+
+  &.purple {
+    background-color: $purple !important;
+  }
+
+  &.yellow {
+    background-color: $yellow !important;
+  }
 
   @include breakpoint-up(tablet) {
     padding: 0 0 6rem;
@@ -186,9 +203,25 @@
     top: -3.5625rem;
 
     img {
-      width: 11.125rem;
+      width: 8.75rem;
       height: 100%;
       animation: spin 16s linear infinite;
+
+      @include breakpoint-up(largePhone) {
+        width: 9.125rem;
+      }
+
+      @include breakpoint-up(tablet) {
+        width: 11.125rem;
+      }
+
+      @include breakpoint-up(iPadPro) {
+        width: 12.125rem;
+      }
+
+      @include breakpoint-up(desktop) {
+        width: 11.125rem;
+      }
 
       &:hover {
         animation-play-state: paused;
@@ -290,9 +323,6 @@
       }
 
       .category {
-        grid-template-columns: repeat(4, 1fr);
-        column-gap: 6rem;
-
         @include breakpoint-up(largePhone) {
           column-gap: 7rem;
         }
@@ -656,16 +686,15 @@
       font-weight: 700;
       font-family: "Montserrat";
       margin-bottom: 0;
+      margin-bottom: $_10px;
 
       @include breakpoint-up(largePhone) {
         font-size: $_20px;
       }
     }
 
-    p,
     a {
       color: $grey;
-      margin-top: $_10px;
       margin-bottom: 0;
       font-weight: 500;
       letter-spacing: 0.05px;
@@ -687,6 +716,10 @@
 
       @include breakpoint-up(tablet) {
         width: 60%;
+      }
+
+      @include breakpoint-up(desktop) {
+        width: 40%;
       }
     }
   }
