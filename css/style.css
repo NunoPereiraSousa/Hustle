@@ -74,6 +74,28 @@
   }
 }
 
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 4));
+            transform: translateX(calc(-250px * 4));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 4));
+            transform: translateX(calc(-250px * 4));
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -913,21 +935,7 @@ footer p span {
   height: 20vw;
   -webkit-transition: all 500ms;
   transition: all 500ms;
-}
-
-.home__third__projects__item.open {
-  height: auto;
-  height: calc(100vh - 60px - 200px);
-}
-
-.home__third__projects__item.open .home__third__projects__item__desc {
-  display: block;
-  -webkit-animation: visible 500ms ease 100ms forwards;
-          animation: visible 500ms ease 100ms forwards;
-}
-
-.home__third__projects__item:first-child {
-  border-top: 2px solid #dfd3c3;
+  cursor: pointer;
 }
 
 @media (min-width: 64em) {
@@ -946,7 +954,49 @@ footer p span {
   }
 }
 
-.home__third__projects__item:hover {
+.home__third__projects__item.open {
+  height: calc(100vh - 60px - 200px);
+  background-color: #dfd3c3;
+}
+
+.home__third__projects__item.open h3 {
+  color: #171717;
+}
+
+.home__third__projects__item.open:hover h3 {
+  color: #171717;
+}
+
+@media (min-width: 64em) {
+  .home__third__projects__item.open {
+    height: auto;
+    width: 30vw;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 75% 25%;
+        grid-template-columns: 75% 25%;
+  }
+}
+
+.home__third__projects__item.open .home__third__projects__item__carousel {
+  display: block;
+  -webkit-animation: visible 500ms ease 100ms forwards;
+          animation: visible 500ms ease 100ms forwards;
+}
+
+@media (min-width: 64em) {
+  .home__third__projects__item.open .home__third__projects__item__info {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+.home__third__projects__item:first-child {
+  border-top: 2px solid #dfd3c3;
+}
+
+.home__third__projects__item:hover, .home__third__projects__item:focus, .home__third__projects__item:active {
   background-color: #dfd3c3;
 }
 
@@ -1080,18 +1130,6 @@ footer p span {
   }
 }
 
-@media (min-width: 64em) {
-  .home__third__projects__item__desc {
-    padding: 4rem 3rem;
-  }
-}
-
-@media (min-width: 75em) {
-  .home__third__projects__item__desc {
-    padding: 3rem 0;
-  }
-}
-
 .home__third__projects__item__desc p {
   line-height: 1.625rem;
   font-family: "Raleway";
@@ -1148,6 +1186,62 @@ footer p span {
     font-size: 1.375rem;
     margin: 5rem 0 5rem 1.25rem;
   }
+}
+
+.home__third__projects__item__carousel {
+  overflow: hidden;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  width: 90vh;
+  padding: 0.75rem 1rem;
+  visibility: hidden;
+  -webkit-transform: rotate(270deg) translateY(25%);
+          transform: rotate(270deg) translateY(25%);
+}
+
+.home__third__projects__item__carousel::before, .home__third__projects__item__carousel::after {
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.home__third__projects__item__carousel::after {
+  right: 0;
+  top: 0;
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+}
+
+.home__third__projects__item__carousel::before {
+  left: 0;
+  top: 0;
+}
+
+.home__third__projects__item__carousel .slide-track {
+  -webkit-animation: scroll 20s linear infinite;
+          animation: scroll 20s linear infinite;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(250px * 8);
+}
+
+.home__third__projects__item__carousel .slide-track .slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+  width: 250px;
 }
 
 .contact {

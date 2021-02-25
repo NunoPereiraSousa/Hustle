@@ -486,22 +486,7 @@
       border-bottom: 2px solid $sand;
       height: 20vw;
       transition: all 500ms;
-
-      &.open {
-        height: auto;
-        height: calc(100vh - 60px - 200px);
-        // transition: all 500ms;
-
-        & .home__third__projects__item__desc {
-          // visibility: visible;
-          display: block;
-          animation: visible 500ms ease 100ms forwards;
-        }
-      }
-
-      &:first-child {
-        border-top: 2px solid $sand;
-      }
+      cursor: pointer;
 
       @include breakpoint-up(iPadPro) {
         border: 2px solid $sand;
@@ -514,7 +499,51 @@
         height: calc(100vh - 30px);
       }
 
-      &:hover {
+      &.open {
+        height: calc(100vh - 60px - 200px);
+        background-color: $sand;
+
+        h3 {
+          color: $black;
+        }
+
+        &:hover h3 {
+          color: $black;
+        }
+
+        @include breakpoint-up(iPadPro) {
+          height: auto;
+          width: 30vw;
+          display: grid;
+          grid-template-columns: 75% 25%;
+        }
+
+        & .home__third__projects__item__carousel {
+          // visibility: visible;
+          display: block;
+          animation: visible 500ms ease 100ms forwards;
+        }
+
+        & .home__third__projects__item__info {
+          @include breakpoint-up(iPadPro) {
+            order: 2;
+          }
+        }
+
+        // & .home__third__projects__item__desc {
+        //   @include breakpoint-up(iPadPro) {
+        //     transform: rotate(180deg);
+        //   }
+        // }
+      }
+
+      &:first-child {
+        border-top: 2px solid $sand;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
         background-color: $sand;
       }
 
@@ -609,13 +638,14 @@
           padding: 2rem 3rem;
         }
 
-        @include breakpoint-up(iPadPro) {
-          padding: 4rem 3rem;
-        }
+        // @include breakpoint-up(iPadPro) {
+        //   padding: 4rem 3rem;
+        //   border: none;
+        // }
 
-        @include breakpoint-up(desktop) {
-          padding: 3rem 0;
-        }
+        // @include breakpoint-up(desktop) {
+        //   padding: 3rem 0;
+        // }
 
         p {
           line-height: $_26px;
@@ -627,42 +657,6 @@
         .know__more {
           display: flex;
           align-items: center;
-
-          // .arrow2 {
-          //   background: $red;
-          //   height: 2px;
-          //   width: 30px;
-          //   position: relative;
-          //   cursor: pointer;
-          //   // transform: translateX(-20%);
-          //   // opacity: 0;
-
-          //   @include breakpoint-up(desktop) {
-          //     margin-left: 0;
-          //   }
-
-          //   &:before,
-          //   &:after {
-          //     content: "";
-          //     background: $red;
-          //     position: absolute;
-          //     height: 2px;
-          //     width: 10.25px;
-          //   }
-
-          //   &:before {
-          //     right: -2px;
-          //     bottom: -3px;
-          //     transform: rotate(-45deg);
-          //   }
-
-          //   &:after {
-          //     right: -2px;
-          //     top: -3px;
-          //     transform: rotate(45deg);
-          //   }
-          // }
-
           a {
             background-color: transparent;
             border: none;
@@ -697,6 +691,51 @@
               font-size: $_22px;
               margin: 5rem 0 5rem 1.25rem;
             }
+          }
+        }
+      }
+
+      &__carousel {
+        // margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: fit-content;
+        width: 90vh;
+        padding: 0.75rem 1rem;
+        visibility: hidden;
+        transform: rotate(270deg) translateY(25%);
+
+        &::before,
+        &::after {
+          content: "";
+          height: 100px;
+          position: absolute;
+          width: 200px;
+          z-index: 2;
+        }
+
+        &::after {
+          right: 0;
+          top: 0;
+          transform: rotateZ(180deg);
+        }
+
+        &::before {
+          left: 0;
+          top: 0;
+        }
+
+        .slide-track {
+          animation: scroll 20s linear infinite;
+          display: flex;
+          width: calc(250px * 8);
+
+          .slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            width: 250px;
           }
         }
       }
