@@ -484,6 +484,20 @@
 
     &__item {
       border-bottom: 2px solid $sand;
+      height: 20vw;
+      transition: all 500ms;
+
+      &.open {
+        height: auto;
+        height: calc(100vh - 60px - 200px);
+        // transition: all 500ms;
+
+        & .home__third__projects__item__desc {
+          // visibility: visible;
+          display: block;
+          animation: visible 500ms ease 100ms forwards;
+        }
+      }
 
       &:first-child {
         border-top: 2px solid $sand;
@@ -576,6 +590,112 @@
               font-size: $_24px;
               writing-mode: vertical-lr;
               margin-bottom: $_30px;
+            }
+          }
+        }
+      }
+
+      &__desc {
+        border-top: 2px solid $black;
+        padding: 0.75rem 1rem;
+        visibility: hidden;
+        // display: none;
+
+        @include breakpoint-up(largePhone) {
+          padding: 1rem;
+        }
+
+        @include breakpoint-up(tablet) {
+          padding: 2rem 3rem;
+        }
+
+        @include breakpoint-up(iPadPro) {
+          padding: 4rem 3rem;
+        }
+
+        @include breakpoint-up(desktop) {
+          padding: 3rem 0;
+        }
+
+        p {
+          line-height: $_26px;
+          font-family: "Raleway";
+          letter-spacing: 0.25px;
+          margin-bottom: 1.75rem;
+        }
+
+        .know__more {
+          display: flex;
+          align-items: center;
+
+          // .arrow2 {
+          //   background: $red;
+          //   height: 2px;
+          //   width: 30px;
+          //   position: relative;
+          //   cursor: pointer;
+          //   // transform: translateX(-20%);
+          //   // opacity: 0;
+
+          //   @include breakpoint-up(desktop) {
+          //     margin-left: 0;
+          //   }
+
+          //   &:before,
+          //   &:after {
+          //     content: "";
+          //     background: $red;
+          //     position: absolute;
+          //     height: 2px;
+          //     width: 10.25px;
+          //   }
+
+          //   &:before {
+          //     right: -2px;
+          //     bottom: -3px;
+          //     transform: rotate(-45deg);
+          //   }
+
+          //   &:after {
+          //     right: -2px;
+          //     top: -3px;
+          //     transform: rotate(45deg);
+          //   }
+          // }
+
+          a {
+            background-color: transparent;
+            border: none;
+            color: $red;
+            font-size: $_16px;
+            font-family: "Montserrat";
+            font-weight: 500;
+            letter-spacing: -0.25px;
+            position: relative;
+
+            &::after {
+              content: " ↗";
+              display: inline-block;
+              font-size: $_24px;
+              font-family: "Merriweather";
+              position: absolute;
+              top: -15%;
+              margin-left: $_14px;
+            }
+
+            @include breakpoint-up(tablet) {
+              font-size: $_24px;
+              margin: 3.8rem 0 3.8rem 1.25rem;
+            }
+
+            @include breakpoint-up(iPadPro) {
+              font-size: $_28px;
+              margin: 5rem 0 5rem 1.25rem;
+            }
+
+            @include breakpoint-up(desktop) {
+              font-size: $_22px;
+              margin: 5rem 0 5rem 1.25rem;
             }
           }
         }

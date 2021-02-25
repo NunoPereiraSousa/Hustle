@@ -76,7 +76,6 @@ gsap.to(".home__second", {
   scrollTrigger: {
     trigger: ".counter__be",
     start: "center center",
-    markers: true,
     onEnter: () => {
       document.querySelector(".home__second").classList.add("blue");
     },
@@ -97,7 +96,6 @@ gsap.to(".home__second", {
   scrollTrigger: {
     trigger: ".counter__tt",
     start: "center center",
-    markers: true,
     onEnter: () => {
       document.querySelector(".home__second").classList.add("yellow");
     },
@@ -118,7 +116,6 @@ gsap.to(".home__second", {
   scrollTrigger: {
     trigger: ".counter__uiux",
     start: "center center",
-    markers: true,
     onEnter: () => {
       document.querySelector(".home__second").classList.add("purple");
     },

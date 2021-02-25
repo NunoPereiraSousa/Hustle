@@ -28,3 +28,13 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes visible {
+  from {
+    visibility: hidden;
+  }
+
+  to {
+    visibility: visible;
+  }
+}
