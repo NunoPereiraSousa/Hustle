@@ -73,6 +73,18 @@ a:focus {
   }
 }
 
+.hide-for-mobile2 {
+  @include breakpoint-down(largePhone) {
+    display: none !important;
+  }
+}
+
+.hide-for-tablet {
+  @include breakpoint-up(tablet) {
+    display: none !important;
+  }
+}
+
 .hide-for-desktop {
   @include breakpoint-up(iPadPro) {
     display: none !important;

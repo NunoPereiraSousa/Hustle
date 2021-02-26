@@ -53,6 +53,87 @@
     transform: translateX(0);
   }
   100% {
+    transform: translateX(calc(-100px * 8));
+  }
+}
+
+@keyframes scroll2-tablet {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
     transform: translateX(calc(-150px * 8));
+  }
+}
+
+@keyframes scroll2-desktop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 8));
+  }
+}
+
+@keyframes scroll2-iPadPro {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-150px * 8));
+  }
+}
+
+@keyframes scroll3 {
+  0% {
+    transform: translateX(calc(-100px * 8));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes scroll3-desktop {
+  0% {
+    transform: translateX(calc(-250px * 8));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes scroll4 {
+  0% {
+    transform: translateX(calc(-200px * 8));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes scroll5 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100px * 8));
+  }
+}
+
+@keyframes scroll5-desktop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-200px * 8));
+  }
+}
+
+@keyframes scroll6 {
+  0% {
+    transform: translateX(calc(-100px * 8));
+  }
+  100% {
+    transform: translateX(0);
   }
 }

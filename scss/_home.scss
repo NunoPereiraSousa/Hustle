@@ -797,10 +797,10 @@
 
       .carousel {
         // margin: auto;
-        // overflow: hidden;
+        overflow: hidden;
         position: relative;
         width: fit-content;
-        width: 90vw;
+        width: 100%;
         padding: 0.75rem 1rem;
         // visibility: hidden;
         // transform: rotate(270deg) translateY(25%);
@@ -808,68 +808,145 @@
         &::before,
         &::after {
           content: "";
-          height: 100px;
+          height: 95%;
           position: absolute;
-          width: 100px;
-          z-index: 2;
+          width: 40px;
+          z-index: 999;
+          background-color: $sand;
         }
 
         &::after {
-          right: 0;
-          top: 0;
+          right: 0%;
+          top: 10%;
           transform: rotateZ(180deg);
         }
 
         &::before {
-          left: 0;
-          top: 0;
+          left: 0%;
+          top: 10%;
+        }
+
+        &.phone .slide-track {
+          animation: scroll3 14s linear infinite;
+
+          @include breakpoint-up(desktop) {
+            width: calc(250px * 16);
+            animation: scroll3-desktop 14s linear infinite;
+          }
+        }
+
+        &.social1 .slide-track {
+          width: calc(100px * 16);
+          animation: scroll5 14s linear infinite;
+        }
+
+        &.social2 .slide-track {
+          width: calc(100px * 16);
+          animation: scroll5 16s linear infinite;
+        }
+
+        &.social3 .slide-track {
+          width: calc(100px * 16);
+          animation: scroll5 11s linear infinite;
+        }
+
+        &.social4 .slide-track {
+          width: calc(100px * 16);
+          animation: scroll5 12s linear infinite;
+        }
+
+        &.social1 .slide-track,
+        &.social2 .slide-track,
+        &.social3 .slide-track,
+        &.social4 .slide-track {
+          @include breakpoint-up(desktop) {
+            width: calc(200px * 16);
+            animation: scroll5-desktop 14s linear infinite;
+          }
         }
 
         .slide-track {
           animation: scroll2 10s linear infinite;
+          height: 100%;
           display: flex;
-          width: calc(150px * 16);
+          width: calc(100px * 16);
+
+          @include breakpoint-up(iPadPro) {
+            width: calc(150px * 16);
+            animation: scroll2-tablet 14s linear infinite;
+          }
+
+          @include breakpoint-up(desktop) {
+            width: calc(250px * 16);
+            animation: scroll2-desktop 14s linear infinite;
+          }
+
+          &:hover {
+            animation-play-state: paused;
+          }
+
+          .overlay {
+            position: fixed;
+            top: 0%;
+            left: 0%;
+            mix-blend-mode: difference;
+            background-color: $black;
+            width: 100%;
+            height: 0;
+            transition: all 0.5s ease;
+          }
+
+          &:hover .overlay {
+            height: 100%;
+          }
 
           .slide {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100px;
-            width: 150px;
+            width: 100px;
+
+            @include breakpoint-up(iPadPro) {
+              width: 150px;
+            }
+
+            @include breakpoint-up(desktop) {
+              width: 250px;
+            }
 
             a {
               color: $black;
               font-weight: 500;
               font-family: "Raleway";
-              font-size: $_60px;
+              font-size: $_30px;
               letter-spacing: 0.25px;
 
               @include breakpoint-up(desktop) {
-                font-size: $_120px;
+                font-size: $_70px;
               }
             }
           }
         }
       }
 
-      .phone .slide-track {
-        animation: scroll2 20s linear infinite;
-      }
-
       .email,
-      .location,
       .phone,
       .social1,
       .social2,
       .social3,
       .social4 {
-        padding: 4.5rem 1rem;
+        padding: 2.5rem 1rem;
+
+        @include breakpoint-up(desktop) {
+          padding: 4.5rem 1rem;
+        }
 
         a {
           color: $black;
-          font-weight: 200;
+          font-weight: 500;
           font-family: "Raleway";
-          font-size: $_40px;
+          font-size: $_30px;
           letter-spacing: 0.25px;
 
           @include breakpoint-up(desktop) {
@@ -884,6 +961,7 @@
         .social1,
         .social3 {
           border-right: 1px solid $black;
+          border-bottom: 1px solid $black;
         }
 
         .social2 {
@@ -893,17 +971,16 @@
         .social1 {
           border-bottom: 1px solid $black;
         }
+
+        .social4 {
+          border-bottom: 1px solid $black;
+        }
       }
 
       .email,
       .phone,
-      .socials,
-      .location {
+      .socials {
         border-top: 1px solid $black;
-      }
-
-      .location {
-        border-bottom: 1px solid $black;
       }
 
       // .email {
