@@ -47,3 +47,12 @@
     transform: translateX(calc(-250px * 4));
   }
 }
+
+@keyframes scroll2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-150px * 8));
+  }
+}

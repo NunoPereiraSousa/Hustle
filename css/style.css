@@ -96,6 +96,28 @@
   }
 }
 
+@-webkit-keyframes scroll2 {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-150px * 8));
+            transform: translateX(calc(-150px * 8));
+  }
+}
+
+@keyframes scroll2 {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-150px * 8));
+            transform: translateX(calc(-150px * 8));
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -280,12 +302,25 @@ a:focus {
   top: 100%;
 }
 
+footer {
+  background-color: #dfd3c3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 2rem;
+}
+
 footer p {
-  margin: 1.25rem 0;
+  margin: 0 0 1.25rem;
   text-align: center;
   font-size: 0.875rem;
-  color: #dfd3c3;
+  color: #171717;
   letter-spacing: -0.25px;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 footer p span {
@@ -294,7 +329,6 @@ footer p span {
 
 @media (min-width: 48em) {
   footer p {
-    margin: 1.875rem 0;
     font-size: 1rem;
   }
 }
@@ -1304,41 +1338,146 @@ footer p span {
 }
 
 .contact__connect__info {
+  margin-top: 1.875rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+  text-align: center;
 }
 
-.contact__connect__info .email {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-area: 1 / 1 / 1 / 2;
+.contact__connect__info .carousel {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  width: 90vw;
+  padding: 0.75rem 1rem;
+}
+
+.contact__connect__info .carousel::before, .contact__connect__info .carousel::after {
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 100px;
+  z-index: 2;
+}
+
+.contact__connect__info .carousel::after {
+  right: 0;
+  top: 0;
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+}
+
+.contact__connect__info .carousel::before {
+  left: 0;
+  top: 0;
+}
+
+.contact__connect__info .carousel .slide-track {
+  -webkit-animation: scroll2 10s linear infinite;
+          animation: scroll2 10s linear infinite;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(150px * 16);
+}
+
+.contact__connect__info .carousel .slide-track .slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+  width: 150px;
+}
+
+.contact__connect__info .carousel .slide-track .slide a {
+  color: #171717;
+  font-weight: 500;
+  font-family: "Raleway";
+  font-size: 3.75rem;
+  letter-spacing: 0.25px;
+}
+
+@media (min-width: 75em) {
+  .contact__connect__info .carousel .slide-track .slide a {
+    font-size: 7.5rem;
+  }
+}
+
+.contact__connect__info .phone .slide-track {
+  -webkit-animation: scroll2 20s linear infinite;
+          animation: scroll2 20s linear infinite;
+}
+
+.contact__connect__info .email,
+.contact__connect__info .location,
+.contact__connect__info .phone,
+.contact__connect__info .social1,
+.contact__connect__info .social2,
+.contact__connect__info .social3,
+.contact__connect__info .social4 {
+  padding: 4.5rem 1rem;
+}
+
+.contact__connect__info .email a,
+.contact__connect__info .location a,
+.contact__connect__info .phone a,
+.contact__connect__info .social1 a,
+.contact__connect__info .social2 a,
+.contact__connect__info .social3 a,
+.contact__connect__info .social4 a {
+  color: #171717;
+  font-weight: 200;
+  font-family: "Raleway";
+  font-size: 2.5rem;
+  letter-spacing: 0.25px;
+}
+
+@media (min-width: 75em) {
+  .contact__connect__info .email a,
+  .contact__connect__info .location a,
+  .contact__connect__info .phone a,
+  .contact__connect__info .social1 a,
+  .contact__connect__info .social2 a,
+  .contact__connect__info .social3 a,
+  .contact__connect__info .social4 a {
+    font-size: 7.5rem;
+  }
+}
+
+.contact__connect__info .socials {
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.contact__connect__info .socials .social1,
+.contact__connect__info .socials .social3 {
+  border-right: 1px solid #171717;
+}
+
+.contact__connect__info .socials .social2 {
+  border-bottom: 1px solid #171717;
+}
+
+.contact__connect__info .socials .social1 {
+  border-bottom: 1px solid #171717;
+}
+
+.contact__connect__info .email,
+.contact__connect__info .phone,
+.contact__connect__info .socials,
+.contact__connect__info .location {
+  border-top: 1px solid #171717;
 }
 
 .contact__connect__info .location {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-area: 2 / 1 / 3 / 2;
-}
-
-.contact__connect__info .social1 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: 3 / 1 / 3 / 3;
-}
-
-.contact__connect__info .social2 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
-  grid-area: 3 / 2 / 3 / 4;
+  border-bottom: 1px solid #171717;
 }
 
 .contact__content {
