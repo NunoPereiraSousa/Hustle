@@ -392,6 +392,7 @@ a:focus {
 .home-line,
 .home-desktop-line,
 .arrow-line,
+.about-line,
 .line {
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
@@ -549,11 +550,20 @@ footer p span {
   left: 0%;
   width: 100%;
   height: 0%;
+  z-index: 1;
   background-color: #dfd3c3;
 }
 
 .about__first {
-  padding-top: 6rem;
+  padding: 6rem 1.5rem;
+  height: 100vh;
+}
+
+.about__first h1 {
+  text-align: center;
+  color: #dfd3c3;
+  line-height: 4.375rem;
+  font-size: 1.625rem;
 }
 
 .home__first {
@@ -987,7 +997,7 @@ footer p span {
   white-space: nowrap;
   font-size: 3.375rem;
   font-weight: 500;
-  margin: 0 4rem;
+  margin: 0 3.5rem;
 }
 
 @media (min-width: 25.875em) {

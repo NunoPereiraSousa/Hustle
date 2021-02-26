@@ -1,3 +1,5 @@
+gsap.config({ nullTargetWarn: false });
+
 barba.init({
   sync: true,
   transitions: [
@@ -127,6 +129,16 @@ function onLoad() {
       ".home-line",
       {
         duration: 0.65,
+        y: 0,
+        stagger: 0.25,
+        ease: "expo.easeInOut"
+      },
+      "-=1.5"
+    )
+    .to(
+      ".about-line",
+      {
+        duration: 0.95,
         y: 0,
         stagger: 0.25,
         ease: "expo.easeInOut"
