@@ -555,15 +555,72 @@ footer p span {
 }
 
 .about__first {
+  position: relative;
   padding: 6rem 1.5rem;
   height: 100vh;
 }
 
-.about__first h1 {
-  text-align: center;
+.about__first__quote {
+  text-align: left;
   color: #dfd3c3;
-  line-height: 4.375rem;
+  line-height: 3.125rem;
   font-size: 1.625rem;
+}
+
+.about__first__image {
+  margin: 6rem auto;
+}
+
+.about__first__image img {
+  width: 5.125rem;
+  height: 100%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.about__first__cards__card {
+  padding-bottom: 2rem;
+}
+
+.about__first__cards__card .line {
+  width: 100%;
+  height: 1.5px;
+  margin-bottom: 2rem;
+}
+
+.about__first__cards__card .line#first {
+  background-color: #d0503e;
+}
+
+.about__first__cards__card .line#second {
+  background-color: #aca359;
+}
+
+.about__first__cards__card .line#third {
+  background-color: #259b69;
+}
+
+.about__first__cards__card h1 {
+  color: #dfd3c3;
+  position: relative;
+  font-size: 1.125rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.about__first__cards__card h1 span {
+  font-size: 0.625rem;
+}
+
+.about__first__cards__card h3 {
+  margin-top: 2rem;
+  color: #dfd3c3;
+  font-weight: 400;
+  line-height: 2.125rem;
+  font-size: 1rem;
 }
 
 .home__first {

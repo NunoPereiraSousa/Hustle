@@ -64,6 +64,7 @@ function pageTransition() {
 // page loads for the first time
 function contentAnimation() {
   let tl = gsap.timeline();
+  let tl2 = gsap.timeline();
 
   tl.to(".nav-line", {
     duration: 0.65,
@@ -92,6 +93,13 @@ function contentAnimation() {
       },
       "-=1.5"
     );
+
+  tl2.to(".about-line", {
+    duration: 0.95,
+    y: 0,
+    stagger: 0.25,
+    ease: "expo.easeInOut"
+  });
 }
 
 function onLoad() {

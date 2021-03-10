@@ -1,11 +1,72 @@
 .about__first {
+  position: relative;
   padding: 6rem 1.5rem;
   height: 100vh;
 
-  h1 {
-    text-align: center;
+  &__quote {
+    text-align: left;
     color: $sand;
-    line-height: $_70px;
+    line-height: $_50px;
     font-size: $_26px;
+  }
+
+  &__image {
+    margin: 6rem auto;
+
+    img {
+      width: 5.125rem;
+      height: 100%;
+      transform: rotate(90deg);
+      // animation: spin 16s linear infinite;
+
+      // &:hover {
+      //   animation-play-state: paused;
+      // }
+    }
+  }
+
+  &__cards {
+    &__card {
+      padding-bottom: 2rem;
+
+      .line {
+        width: 100%;
+        height: 1.5px;
+        margin-bottom: 2rem;
+
+        &#first {
+          background-color: $red;
+        }
+
+        &#second {
+          background-color: $yellow;
+        }
+
+        &#third {
+          background-color: $green;
+        }
+      }
+
+      h1 {
+        color: $sand;
+        position: relative;
+        font-size: $_18px;
+        width: fit-content;
+        letter-spacing: 0.5px;
+        font-weight: 500;
+
+        span {
+          font-size: $_10px;
+        }
+      }
+
+      h3 {
+        margin-top: 2rem;
+        color: $sand;
+        font-weight: 400;
+        line-height: $_34px;
+        font-size: $_16px;
+      }
+    }
   }
 }
