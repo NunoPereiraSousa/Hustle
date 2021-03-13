@@ -26,26 +26,21 @@
   }
 
   &__cards {
+    margin-bottom: 8rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &__title {
+      color: $green;
+      font-weight: 500;
+      margin-bottom: 2rem;
+    }
+
     &__card {
       padding-bottom: 2rem;
-
-      .line {
-        width: 100%;
-        height: 1.5px;
-        margin-bottom: 2rem;
-
-        &#first {
-          background-color: $red;
-        }
-
-        &#second {
-          background-color: $yellow;
-        }
-
-        &#third {
-          background-color: $green;
-        }
-      }
+      border-top: 1px solid rgba(223, 211, 195, 0.2);
 
       h1 {
         color: $sand;
@@ -54,10 +49,8 @@
         width: fit-content;
         letter-spacing: 0.5px;
         font-weight: 500;
-
-        span {
-          font-size: $_10px;
-        }
+        margin-top: 2rem;
+        text-transform: uppercase;
       }
 
       h3 {
@@ -66,6 +59,42 @@
         font-weight: 400;
         line-height: $_34px;
         font-size: $_16px;
+      }
+
+      p {
+        text-align: right;
+        font-weight: 400;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        font-size: $_13px;
+
+        &.ongoing,
+        &.band {
+          color: $purple;
+        }
+
+        &.past {
+          color: $yellow;
+        }
+
+        &.band,
+        &.play {
+          margin-top: 0;
+        }
+
+        &.play {
+          color: $sand;
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -5%;
+            left: 0;
+            border-bottom: 1px solid $sand;
+            width: 80%;
+          }
+        }
       }
     }
   }

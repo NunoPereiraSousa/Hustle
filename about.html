@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nuno | About</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
     <link rel="icon" href="./assets/svg/Logo.svg" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -57,9 +63,9 @@
         </div>
 
         <div class="about__first__cards">
+          <h1 class="about__first__cards__title">Experiences.</h1>
           <div class="about__first__cards__card">
-            <div class="line" id="first"></div>
-            <h1><span>&#9679;</span> Coding teacher and tutor.</h1>
+            <h1>Coding teacher and tutor.</h1>
             <h3>
               <div class="title_achievement">
                 <div>Teaching programming to people</div>
@@ -71,24 +77,9 @@
                 <div><b>130 hours</b> tutored.</div>
               </div>
             </h3>
+            <p class="ongoing">Ongoing</p>
           </div>
           <div class="about__first__cards__card">
-            <div class="line" id="second"></div>
-            <h1>Athlete</h1>
-            <h3>
-              <div class="title_achievement">
-                <div>3rd best European time in</div>
-              </div>
-              <div class="title_achievement">
-                <div>4x200m freestyle relay. Multiple</div>
-              </div>
-              <div class="title_achievement">
-                <div>times National Champion.</div>
-              </div>
-            </h3>
-          </div>
-          <div class="about__first__cards__card">
-            <div class="line" id="third"></div>
             <h1>College student</h1>
             <h3>
               <div class="title_achievement">
@@ -101,13 +92,117 @@
                 <div>development degree - 4.34 / 5.</div>
               </div>
             </h3>
+            <p class="ongoing">Ongoing</p>
+          </div>
+          <div class="about__first__cards__card">
+            <h1>Front-end Developer Intern</h1>
+            <h3>
+              <div class="title_achievement">
+                <div>Currently doing an internship</div>
+              </div>
+              <div class="title_achievement">
+                <div>at the oPorto Research,</div>
+              </div>
+              <div class="title_achievement">
+                <div>Technology & Innovation Center.</div>
+              </div>
+            </h3>
+            <p class="ongoing">Ongoing</p>
+          </div>
+          <div class="about__first__cards__card">
+            <h1>5 Start rating Freelancer</h1>
+            <h3>
+              <div class="title_achievement">
+                <div>I'm a freelancer with a 5 star</div>
+              </div>
+              <div class="title_achievement">
+                <div>rating with many projects</div>
+              </div>
+              <div class="title_achievement">
+                <div>delivered over the past months.</div>
+              </div>
+            </h3>
+            <p class="ongoing">Ongoing</p>
+          </div>
+          <div class="about__first__cards__card">
+            <h1>Athlete</h1>
+            <h3>
+              <div class="title_achievement">
+                <div>3rd best European time in</div>
+              </div>
+              <div class="title_achievement">
+                <div>4x200m freestyle relay. Multiple</div>
+              </div>
+              <div class="title_achievement">
+                <div>times National Champion.</div>
+              </div>
+            </h3>
+            <div class="flex flex-ai-c flex-jc-fe">
+              <p class="past">2015 &nbsp;- &nbsp;</p>
+              <p class="ongoing">Ongoing</p>
+            </div>
+          </div>
+          <div class="about__first__cards__card">
+            <h1>Pianist</h1>
+            <h3>
+              <div class="title_achievement">
+                <div>Completed a 5 year music course</div>
+              </div>
+              <div class="title_achievement">
+                <div>where piano was my main instrument</div>
+              </div>
+            </h3>
+            <p class="past">2015</p>
+          </div>
+        </div>
+
+        <div class="about__first__cards">
+          <h1 class="about__first__cards__title">Songs.</h1>
+          <div class="about__first__cards__card">
+            <h1>See You Again.</h1>
+            <div class="flex flex-ai-c flex-jc-sb">
+              <audio id="song1">
+                <source
+                  src="./assets/Audio/Wiz Khalifa - See You Again ft. Charlie Puth [Official Video] Furious 7 Soundtrack.mp3"
+                  type="audio/mpeg"
+                />
+              </audio>
+              <p class="play" id="play__song1">Play</p>
+              <p class="band">Wiz Khalifa</p>
+            </div>
+          </div>
+          <div class="about__first__cards__card">
+            <h1>November Rain.</h1>
+            <div class="flex flex-ai-c flex-jc-sb">
+              <audio id="song2">
+                <source
+                  src="./assets/Audio/November Rain.mp3"
+                  type="audio/mpeg"
+                />
+              </audio>
+              <p class="play" id="play__song2">Play</p>
+              <p class="band">Guns N' Roses</p>
+            </div>
+          </div>
+          <div class="about__first__cards__card">
+            <h1>Knockin On Heavens Door.</h1>
+            <div class="flex flex-ai-c flex-jc-sb">
+              <audio id="song3">
+                <source
+                  src="./assets/Audio/Knockin On Heavens Door.mp3"
+                  type="audio/mpeg"
+                />
+              </audio>
+              <p class="play" id="play__song3">Play</p>
+              <p class="band">Guns N' Roses</p>
+            </div>
           </div>
         </div>
       </section>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
-
     <script src="./js/page_transition.js"></script>
+    <script src="./js/songs.js"></script>
   </body>
 </html>

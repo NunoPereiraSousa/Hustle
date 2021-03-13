@@ -5,7 +5,7 @@ let timeline = gsap.timeline();
 gsap.to(".home-desktop-line", {
   scrollTrigger: {
     trigger: ".home-desktop-line",
-    start: "-50% center"
+    start: "-200% center"
   },
   y: 0,
   stagger: 0.25,
